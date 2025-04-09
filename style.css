@@ -19,6 +19,15 @@ body {
     padding: 30px 30px;
     text-decoration: none;
   }
+
+  .navbar b {
+    float: left;
+    font-size: 20px;
+    color: white;
+    text-align: center;
+    padding: 30px 30px;
+    text-decoration: none;
+  }
   
   /* dropdown container */
   .dropdown {
@@ -101,5 +110,116 @@ body {
     background-color: rgb(68, 89, 162);
     color: #ffffff;
   }
+
+  .resources-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.resource-block {
+    background-color: white;
+    border: 1px solid #e0e0e0;
+    display: flex;
+    align-items: stretch;
+    overflow: hidden;
+    transition: box-shadow 0.3s ease;
+}
+
+.resource-block:hover {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.resource-logo {
+    flex: 0 0 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f9f9f9;
+    padding: 15px;
+}
+
+.resource-logo img {
+    max-width: 150px;
+    max-height: 150px;
+    object-fit: contain;
+}
+
+.resource-content {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    border-left: 1px solid #e0e0e0;
+    border-right: 1px solid #e0e0e0;
+}
+
+.resource-details {
+    flex: 2;
+}
+
+.resource-details h2 {
+    margin: 0 0 10px 0;
+    color: #333;
+    font-size: 1.4em;
+}
+
+.resource-description {
+    color: #666;
+    margin-bottom: 0;
+}
+
+.resource-contact {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+.resource-contact a {
+    color: #0066cc;
+    text-decoration: none;
+    margin-bottom: 8px;
+    text-align: right;
+}
+
+.resource-contact a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .resource-block {
+        flex-direction: column;
+    }
+
+    .resource-logo {
+        width: 100%;
+        max-height: 200px;
+    }
+
+    .resource-content {
+        flex-direction: column;
+        border-left: none;
+        border-right: none;
+        border-top: 1px solid #e0e0e0;
+        border-bottom: 1px solid #e0e0e0;
+        text-align: center;
+    }
+
+    .resource-details,
+    .resource-contact {
+        width: 100%;
+        align-items: center;
+        text-align: center;
+        padding: 15px;
+    }
+
+    .resource-contact a {
+        text-align: center;
+    }
+}
    
    
