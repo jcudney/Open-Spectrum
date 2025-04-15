@@ -1,46 +1,105 @@
+/*FONTS*/
+.special-gothic-regular {
+  font-family: "Special Gothic", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.roboto-condensed-regular {
+  font-family: "Roboto Condensed", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/*GLOBAL CSS CODE START*/
 /* removes bodies default margin*/
 body {
   margin: 0;
+  background: #e9f7fc;
 }
 
-  /* navbar container */
-  .navbar {
+.imageLeft {
+  display: flex;
+  align-items: center;
+  justify-content: center
+}
+
+img {
+  max-width: 150%;
+  max-height:150%;
+}
+
+.text {
+  color: #071F3A;
+  padding-left: 150px;
+}
+
+.center {
+  margin: auto;
+  width: 75%;
+  padding: 10px;
+}
+
+footer {
+  text-align: center;
+  padding: 30px;
+  background: linear-gradient(111deg, #3EBAD6 19.12%, #0C478A 80.62%);
+  font-family: "Special Gothic", sans-serif;
+  font-size: 20px;
+  color: #e9f7fc;
+}
+
+/*GLOBAL CSS CODE END*/
+
+
+/*NAVBAR CSS CODE START*/
+/* navbar container */
+.navbar {
     overflow: hidden;
-    background-color: rgb(68, 89, 162);
-    font-family: Arial;
-  }
-  
-  /* links in navbar */
-  .navbar a {
-    float: right;
+    background: linear-gradient(291deg, #3EBAD6 19.12%, #0C478A 80.62%);
+    font-family: "Special Gothic", sans-serif;
     font-size: 20px;
-    color: white;
+  }
+  .navTitle {
+    font-family: "Special Gothic", sans-serif;
+    font-size: 20;
+    color: #e9f7fc;
     text-align: center;
-    padding: 30px 30px;
-    text-decoration: none;
   }
 
-  .navbar b {
-    float: left;
-    font-size: 20px;
-    color: white;
-    text-align: center;
+  /* links in navbar */
+.navbar a {
+    float: right;
     padding: 30px 30px;
     text-decoration: none;
+    font-size: 20px;
+    color: #e9f7fc;
+    text-align: center;
+  }
+
+.navbar b {
+    float: left;
+    padding: 30px 40px;
+    text-decoration: none;
+    font-family: "Special Gothic", sans-serif;
+    font-size: 20px;
+    color: #e9f7fc;
+    text-align: center;
   }
   
   /* dropdown container */
-  .dropdown {
+.dropdown {
     float: right;
     overflow: hidden;
   }
   
   /* dropdown button */
-  .dropdown .dropbtn {
+.dropdown .dropbtn {
     font-size: 20px;
     border: none;
     outline: none;
-    color: white;
+    color: #e9f7fc;
     padding: 30px 30px;
     background-color: inherit;
     font-family: inherit;
@@ -48,24 +107,25 @@ body {
   }
   
   /* navbar hoverstate */
-  .navbar a:hover, .dropdown:hover .dropbtn {
-    background-color: rgb(46, 63, 126);
+.navbar a:hover, .dropdown:hover .dropbtn {
+    background-color: rgb(46, 63, 126, 0.5);
   }
   
   /* dropdown content */
-  .dropdown-content {
+.dropdown-content {
     display: none;
     position: absolute;
-    background-color: white;
+    background-color: #e9f7fc;
+    color: #071F3A;
     min-width: 160px;
-    box-shadow: 0px 8px 8px 0px rgba(0,0,0,0.2);
+    box-shadow: 0px 8px 8px 0px rgba(7, 31, 58, 0.2);
     z-index: 1; /*makes dropdown go above everything*/
   }
   
   /* links in dropdown */
-  .dropdown-content a {
+.dropdown-content a {
     float: none;
-    color: black;
+    color: #071F3A;
     padding: 16px 16px;
     text-decoration: none;
     display: block;
@@ -73,53 +133,29 @@ body {
   }
   
   /* dropdown button hoverstate */
-  .dropdown-content a:hover {
-    background-color: #8e8e8e;
+.dropdown-content a:hover {
+    background-color: #AAC0C7;
   }
   
   /* show dropdown on hoverstate */
-  .dropdown:hover .dropdown-content {
+.dropdown:hover .dropdown-content {
     display: block;
   }
 
-  .imageLeft {
-    display: flex;
-    align-items: center;
-    justify-content: center
-  }
-  
-  img {
-    max-width: 150%;
-    max-height:150%;
-  }
-  
-  .text {
-    
-    padding-left: 150px;
-  }
+/*NAVBAR CSS CODE END*/
 
-  .center {
-    margin: auto;
-    width: 75%;
-    padding: 10px;
-  }
 
-  footer {
-    text-align: center;
-    padding: 30px;
-    background-color: rgb(68, 89, 162);
-    color: #ffffff;
-  }
-
-  .resources-container {
+/*RESOURCES CSS CODE START*/
+.resources-container {
     display: flex;
     flex-direction: column;
     gap: 20px;
+    padding: 20px;
 }
 
 .resource-block {
-    background-color: white;
-    border: 1px solid #e0e0e0;
+    background-color: #FBFEFF;
+    border: 3px rgba(7, 31, 58, 0.2);
     display: flex;
     align-items: stretch;
     overflow: hidden;
@@ -127,7 +163,7 @@ body {
 }
 
 .resource-block:hover {
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 8px 8px rgba(5, 69, 143, 0.2);
 }
 
 .resource-logo {
@@ -135,7 +171,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #f9f9f9;
+    background-color: #FBFEFF;
     padding: 15px;
 }
 
@@ -150,8 +186,8 @@ body {
     display: flex;
     align-items: center;
     padding: 20px;
-    border-left: 1px solid #e0e0e0;
-    border-right: 1px solid #e0e0e0;
+    border-left: 1px solid #AAC0C7;
+    border-right: 1px solid #AAC0C7;
 }
 
 .resource-details {
@@ -159,13 +195,16 @@ body {
 }
 
 .resource-details h2 {
-    margin: 0 0 10px 0;
-    color: #333;
-    font-size: 1.4em;
+    margin: 0 0px 10px 0;
+    color: #071F3A;
+    margin-right: 20px;
+    font-family: "Special Gothic", sans-serif;
+    font-size: 24px;
 }
 
 .resource-description {
-    color: #666;
+    color: #071F3A;
+    font-family: "Special Gothic", sans-serif;
     margin-bottom: 0;
 }
 
@@ -176,11 +215,14 @@ body {
     justify-content: center;
     align-items: flex-end;
     padding: 20px;
-    background-color: #f9f9f9;
+    background-color: #F7FAFB;
+    min-width: 200px;
+    max-width: 250px;
 }
 
 .resource-contact a {
-    color: #0066cc;
+    font-family: "Special Gothic", sans-serif;
+    color: #0C478A;
     text-decoration: none;
     margin-bottom: 8px;
     text-align: right;
@@ -204,8 +246,8 @@ body {
         flex-direction: column;
         border-left: none;
         border-right: none;
-        border-top: 1px solid #e0e0e0;
-        border-bottom: 1px solid #e0e0e0;
+        border-top: 1px solid #AAC0C7;
+        border-bottom: 1px solid #AAC0C7;
         text-align: center;
     }
 
@@ -220,6 +262,8 @@ body {
     .resource-contact a {
         text-align: center;
     }
+
+    /* RESOURCES CSS CODE END*/
 }
    
    
