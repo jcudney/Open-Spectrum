@@ -4,53 +4,94 @@
   <meta charset="utf-8">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Special+Gothic&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Special+Gothic&display=swap" rel="stylesheet"> <!--Gothic Font-->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
 </head>
-<nav>
-  <div class="navbar"> 
 
-    <div class="navTitle">
-      <b href="index.html">Open Spectrum</b>
-    </div>
 
-    <a href="about.html">About Us</a>
-
-    <div class="dropdown">
-      <button class="dropbtn">Resources</button>
-      <div class="dropdown-content">
-        <a href="resources.html">General Resources</a>
-        <a href="medicalResources.html">Medical Resources</a>
-        <a href="legalResources.html">Legal Resources</a>
-      </div>
-    </div>
-
-    <div class="dropdown">
-      <button class="dropbtn">Trans Information</button>
-      <div class="dropdown-content">
-        <a href="trans101.html">Trans 101</a>
-        <a href="dysphoriaEuphoria.html">Dysphoria and Euphoria</a>
-        <a href="comingOut.html">Coming Out</a>
-      </div>
-    </div>
-
-    <a href="index.html">Home</a>
-
-  </div>
-</nav>
 <body>
-
-      <div class="imageLeft center" style="margin-top: 30px">
-        <div class="image">
-          <img src="prideFlag.png">
-        </div>
-        <div class="text">
-          <h2>Open Spectrum is a hub for transgender individuals and allies seeking reliable information, support, and community. Whether you’re exploring your identity, searching for medical or legal resources, or looking to better understand transgender experiences, we are here to help.</h2>
+  <nav>
+    <div class="navbar"> 
+  
+      <div class="navTitle">
+        <b href="index.html">TransCompass</b>
+      </div>
+  
+      <a href="about.html">About Us</a>
+  
+      <div class="dropdown">
+        <button class="dropbtn">Resources</button>
+        <div class="dropdown-content">
+          <a href="resources.html">General Resources</a>
+          <a href="medicalResources.html">Medical Resources</a>
+          <a href="legalResources.html">Legal Resources</a>
         </div>
       </div>
+  
+      <div class="dropdown">
+        <button class="dropbtn">Trans Information</button>
+        <div class="dropdown-content">
+          <a href="trans101.html">Trans 101</a>
+          <a href="dysphoriaEuphoria.html">Dysphoria and Euphoria</a>
+          <a href="comingOut.html">Coming Out</a>
+        </div>
+      </div>
+  
+      <a href="index.html">Home</a>
+  
+    </div>
+  </nav>
+
+  <!-- Slider main container -->
+<div class="swiper">
+  <!-- Additional required wrapper -->
+  <div class="swiper-wrapper">
+    <!-- Slides -->
+    <div class="swiper-slide">Slide 1</div>
+    <div class="swiper-slide">Slide 2</div>
+    <div class="swiper-slide">Slide 3</div>
+    ...
+  </div>
+  <!-- If we need pagination -->
+  <div class="swiper-pagination"></div>
+
+  <!-- If we need navigation buttons -->
+  <div class="swiper-button-prev"></div>
+  <div class="swiper-button-next"></div>
+
+  <!-- If we need scrollbar -->
+  <div class="swiper-scrollbar"></div>
+</div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script>
+  const swiper = new Swiper('.swiper', {
+    // Optional parameters
+    direction: 'vertical',
+    loop: true,
+  
+    // If we need pagination
+    pagination: {
+      el: '.swiper-pagination',
+    },
+  
+    // Navigation arrows
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  
+    // And if we need scrollbar
+    scrollbar: {
+      el: '.swiper-scrollbar',
+    },
+  });
+  </script>
+  
 </body>
 <footer>
   <small>
-    Open Spectrum
+    TransCompass
   </small>
 </footer>
 </html>
