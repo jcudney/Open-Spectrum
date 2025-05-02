@@ -1,3 +1,4 @@
+<!-- NOTES: SwiperJS used for carousel on home page. Code was built off of sample code for implementation, however the code has been significantly customized for use on this site-->
 <html>
 <head>
   <link rel="stylesheet" href="style.css">
@@ -14,6 +15,7 @@
     <div class="navbar"> 
   
       <div class="navTitle">
+        <img src="TransCompassLogo.svg" alt="Trans Compass Logo">
         <b href="index.html">TransCompass</b>
       </div>
   
@@ -47,7 +49,7 @@
   <!-- Additional required wrapper -->
   <div class="swiper-wrapper">
     <!-- Slides -->
-    <div class="swiper-slide">Slide 1</div>
+    <div class="swiper-slide"><img src="prideFlag.png" alt="prideFlag"></div>
     <div class="swiper-slide">Slide 2</div>
     <div class="swiper-slide">Slide 3</div>
     ...
@@ -64,21 +66,23 @@
 </div>
   
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-  <script>
+
+<!--initializing swiper, on index as it is the only page which needs this-->
+<script>
   const swiper = new Swiper('.swiper', {
-    // Optional parameters
-    direction: 'vertical',
+    // Looping carousel
     loop: true,
-  
-    // If we need pagination
-    pagination: {
-      el: '.swiper-pagination',
-    },
   
     // Navigation arrows
     navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
+    },
+
+    // Makes Carousel automatically scroll
+    autoplay: {
+      delay: 4500,
+      disableOnInteraction: false,
     },
   
     // And if we need scrollbar

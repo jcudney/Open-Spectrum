@@ -158,6 +158,17 @@ section {
     font-size: 20;
     color: #e9f7fc;
     text-align: center;
+    vertical-align: middle;
+  }
+  
+  .navbar img {
+    float: left;
+    margin: auto;
+    padding-left: 15px;
+    padding-top: 6px;
+    display:flex;
+    vertical-align: middle;
+    height: 80px;
   }
 
   /* links in navbar */
@@ -172,10 +183,10 @@ section {
 
 .navbar b {
     float: left;
-    padding: 30px 40px;
+    padding: 29px 10px;
     text-decoration: none;
     font-family: "Special Gothic", Roboto, sans-serif;
-    font-size: 20px;
+    font-size: 22px;
     color: #e9f7fc;
     text-align: center;
   }
@@ -245,6 +256,13 @@ section {
 .swiper {
   height: 400px;
   z-index: -2;
+  background-color: #FBFEFF;
+}
+
+.swiper-slide {
+  background-size:cover;
+  justify-content: center;
+  align-items: center;
 }
 
 /*CAROUSEL CSS CODE END*/
