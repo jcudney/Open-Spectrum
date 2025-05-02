@@ -1,4 +1,5 @@
 <!-- NOTES: SwiperJS used for carousel on home page. Code was built off of sample code for implementation, however the code has been significantly customized for use on this site-->
+<!-- NOTES: Artificial intelligence was used for troubleshooting of code and light refinement of CSS. All suggestions were thoroughly reviewed and adapted to cleanly fit within previously written code-->
 <html>
 <head>
   <link rel="stylesheet" href="style.css">
@@ -49,23 +50,96 @@
   <!-- Additional required wrapper -->
   <div class="swiper-wrapper">
     <!-- Slides -->
-    <div class="swiper-slide"><img src="prideFlag.png" alt="prideFlag"></div>
-    <div class="swiper-slide">Slide 2</div>
-    <div class="swiper-slide">Slide 3</div>
-    ...
+    <div class="swiper-slide">
+      <div class="swiper-slide-content">
+        <!-- image on left side of slide -->
+        <div class="slide-image">
+          <img src="delia-giandeini-Q8urQ8ow7CU-unsplash.jpg" alt="Photo of Person holding Trans Pride Flag by Delia Giandeini">
+          <!--Photo by Delia Giandeini on Unsplash https://unsplash.com/photos/people-walking-on-road-Q8urQ8ow7CU?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash-->
+
+          <!-- gradient between image and text -->
+          <div class="slide-gradient"></div>
+      </div>
+      
+      <!-- text on right side of slide -->
+      <div class="slide-content">
+          <h2 class="slide-title">Welcome to TransCompass!</h2>
+          <p class="slide-description">TransCompass is more than just a resource hub—it's a space built with care for transgender people, by people who understand the journey. We recognize that every path is different, and we’re here to support you no matter where you are in yours.</p>
+          <a href="about.html" class="slide-button">About Us</a>
+      </div>
+    </div>
   </div>
-  <!-- If we need pagination -->
+
+    <div class="swiper-slide">
+      <div class="swiper-slide-content">
+      <!-- image on left side of slide -->
+      <div class="slide-image">
+        <img src="brooke-cagle--uHVRvDr7pg-unsplash.jpg" alt="Photo of People Readiong Computer Together by Brook Cagle">
+        <!--Photo by Brooke Cagle on Unsplash https://unsplash.com/photos/a-group-of-friends-at-a-coffee-shop--uHVRvDr7pg?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash-->
+      
+        
+      
+        <!-- gradient between image and text -->
+        <div class="slide-gradient"></div>
+    </div>
+    
+    <!-- text on right side of slide -->
+    <div class="slide-content">
+        <h2 class="slide-title">Learn About Trans Identities</h2>
+        <p class="slide-description">New to transgender topics? Start here! Our Trans 101 page breaks down key terms, identities, and concepts in a clear, respectful way.</p>
+        <a href="trans101.html" class="slide-button">Trans 101</a>
+    </div>
+    </div>
+  </div>
+
+    <div class="swiper-slide">
+      <div class="swiper-slide-content">
+        <!-- image on left side of slide -->
+        <div class="slide-image">
+          <img src="national-cancer-institute-NFvdKIhxYlU-unsplash.jpg" alt="Photo of Doctor at Computer by National Cancer Institute">
+          <!--Photo by National Cancer Institute on Unsplash https://unsplash.com/photos/person-sitting-while-using-laptop-computer-and-green-stethoscope-near-NFvdKIhxYlU?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash-->
+          <!-- gradient between image and text -->
+          <div class="slide-gradient"></div>
+      </div>
+      
+      <!-- text on right side of slide -->
+      <div class="slide-content">
+          <h2 class="slide-title">Explore Trusted Resources</h2>
+          <p class="slide-description">TransCompass has compiled and categorized important transgender resources for individuals living in the United States. Check out our Resources tab, or click below to see general resources!</p>
+          <a href="resources.html" class="slide-button">Resources</a>
+      </div>
+    </div>
+    </div>
+    
+  </div>
+
+  <!--configurations for the SwiperJS Carousel-->
+  <!-- shows us what page were on -->
   <div class="swiper-pagination"></div>
 
-  <!-- If we need navigation buttons -->
+  <!-- buttons to navigate -->
   <div class="swiper-button-prev"></div>
   <div class="swiper-button-next"></div>
 
-  <!-- If we need scrollbar -->
+  <!-- scrollbar -->
   <div class="swiper-scrollbar"></div>
 </div>
-  
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+
+<div class="pageContent">
+  <header>
+    <h1>Transgender Education</h1>
+    <p>At TransCompass, we believe that understanding is the first step toward acceptance. Our Trans Information section offers accessible and respectful guides to understanding transgender identities, experiences, and language—written to support both trans people and those who want to learn more.</p>
+  </header>
+
+  <header>
+    <h1>Resources</h1> 
+    <p>Whether you’re looking for hormone therapy clinics, name change forms, or mental health providers, our curated list connects you to the help you deserve—no guesswork needed.</p>
+  </header>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
 <!--initializing swiper, on index as it is the only page which needs this-->
 <script>
@@ -73,19 +147,19 @@
     // Looping carousel
     loop: true,
   
-    // Navigation arrows
+    // Nav arrows
     navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
     },
 
-    // Makes Carousel automatically scroll
+    // makes Carousel automatically scroll
     autoplay: {
       delay: 4500,
       disableOnInteraction: false,
     },
   
-    // And if we need scrollbar
+    // scroll bar initialization
     scrollbar: {
       el: '.swiper-scrollbar',
     },
