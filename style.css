@@ -5,9 +5,8 @@
   font-style: normal;
 }
 
-.roboto-condensed-regular {
-  font-family: "Roboto Condensed", sans-serif;
-  font-optical-sizing: auto;
+.special-gothic-expanded-one-regular {
+  font-family: "Special Gothic Expanded One", sans-serif;
   font-weight: 400;
   font-style: normal;
 }
@@ -83,7 +82,8 @@ footer {
   text-align: center;
   padding: 30px;
   background: linear-gradient(111deg, #3EBAD6 19.12%, #0C478A 80.62%);
-  font-family: "Special Gothic", Roboto, sans-serif;
+  font-family: "Special Gothic Expanded One", Roboto, sans-serif;
+  font-weight: 100;
   font-size: 20px;
   color: #e9f7fc;
   position: fixed;
@@ -173,117 +173,156 @@ margin-top: 5px;
 text-align: center;
 }
 
+.next-button-container {
+  float: center;
+  padding: 0 10px;
+  width: 100%;
+}
+
+.next-button {
+  float: right;
+  font-size: 20px;
+  padding: 15px 15px;
+  background-color: #3EBAD6;
+  color: #e9f7fc;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: 550;
+  transition: all 0.3s ease;
+  align-self: flex-start;
+}
+.previous-button {
+  float: left;
+  font-size: 20px;
+  padding: 15px 15px;
+  background-color: #3EBAD6;
+  color: #e9f7fc;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: 550;
+  transition: all 0.3s ease;
+  align-self: flex-start;
+}
+
+.next-button:hover {
+  background-color: #357CA9;
+}
+
 /*GLOBAL CSS CODE END*/
 
 
 /*NAVBAR CSS CODE START*/
 /* navbar container */
 .navbar {
-    overflow: hidden;
-    background: linear-gradient(291deg, #3EBAD6 19.12%, #0C478A 80.62%);
-    font-family: "Special Gothic", Roboto, sans-serif;
-    font-size: 20px;
-    width: 100%;
-  }
-  .navTitle {
-    font-family: "Special Gothic", Roboto, sans-serif;
-    font-size: 20;
-    color: #e9f7fc;
-    text-align: center;
-    vertical-align: middle;
-  }
-  
-  .navbar img {
-    float: left;
-    margin: auto;
-    padding-left: 15px;
-    padding-top: 6px;
-    display:flex;
-    vertical-align: middle;
-    height: 80px;
-  }
+  overflow: hidden;
+  background: linear-gradient(291deg, #3EBAD6 19.12%, #0C478A 80.62%);
+  font-family: "Special Gothic", Roboto, sans-serif;
+  font-size: 20px;
+  width: 100%;
+}
 
-  /* links in navbar */
+.navTitle {
+  font-family: "Special Gothic", Roboto, sans-serif;
+  font-size: 20;
+  color: #e9f7fc;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.navbar img {
+  float: left;
+  margin: auto;
+  padding-left: 15px;
+  padding-top: 6px;
+  display:flex;
+  vertical-align: middle;
+  height: 80px;
+}
+
+/* links in navbar */
 .navbar a {
-    float: right;
-    padding: 30px 30px;
-    text-decoration: none;
-    font-size: 20px;
-    color: #e9f7fc;
-    text-align: center;
-  }
+  float: right;
+  padding: 30px 30px;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 550;
+  color: #e9f7fc;
+  text-align: center;
+}
 
 .navbar b {
-    float: left;
-    padding: 29px 10px;
-    text-decoration: none;
-    font-family: "Special Gothic", Roboto, sans-serif;
-    font-size: 22px;
-    color: #e9f7fc;
-    text-align: center;
-  }
-  
-  /* dropdown container */
+  float: left;
+  padding: 29px 10px;
+  text-decoration: none;
+  font-family: "Special Gothic Expanded One", Roboto, sans-serif;
+  font-weight: 100;
+  font-size: 22px;
+  color: #e9f7fc;
+  text-align: center;
+}
+
+/* dropdown container */
 .dropdown {
-    overflow: hidden;
-    float: right;
-    text-decoration: none;
-    font-size: 20px;
-    color: #e9f7fc;
-    text-align: center;
-  }
-  
-  /* dropdown button */
+  overflow: hidden;
+  float: right;
+  text-decoration: none;
+  font-size: 20px;
+  color: #e9f7fc;
+  text-align: center;
+}
+
+/* dropdown button */
 .dropdown .dropbtn {
-    font-size: 20px;
-    border: none;
-    outline: none;
-    color: #e9f7fc;
-    padding: 30px 40px;
-    background-color: inherit;
-    font-family: inherit;
-    margin: 0;
-    height: 92;
-  }
-  
-  /* navbar hoverstate */
+  font-size: 20px;
+  border: none;
+  outline: none;
+  color: #e9f7fc;
+  padding: 30px 40px;
+  font-weight: 550;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+  height: 92;
+}
+
+/* navbar hoverstate */
 .navbar a:hover, .dropdown:hover .dropbtn {
-    background-color: rgb(46, 63, 126, 0.5);
-    transition: all 0.3s ease;
-  }
-  
-  /* dropdown content */
+  background-color: rgb(46, 63, 126, 0.5);
+  transition: all 0.3s ease;
+}
+
+/* dropdown content */
 .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #e9f7fc;
-    color: #071F3A;
-    min-width: 160px;
-    box-shadow: 0px 8px 8px 0px rgba(7, 31, 58, 0.2);
-    z-index: 2; /*makes dropdown go above everything*/
-    transition: all 0.3s ease;
-  }
-  
-  /* links in dropdown */
+  display: none;
+  position: absolute;
+  background-color: #e9f7fc;
+  color: #071F3A;
+  min-width: 160px;
+  box-shadow: 0px 8px 8px 0px rgba(7, 31, 58, 0.2);
+  z-index: 2; /makes dropdown go above everything*/
+  transition: all 0.3s ease;
+}
+
+/* links in dropdown */
 .dropdown-content a {
-    float: none;
-    color: #071F3A;
-    padding: 16px 16px;
-    text-decoration: none;
-    display: block;
-    text-align: left;
-    transition: all 0.3s ease;
-  }
-  
-  /* dropdown button hoverstate */
+  float: none;
+  color: #071F3A;
+  padding: 16px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+  transition: all 0.3s ease;
+}
+
+/* dropdown button hoverstate */
 .dropdown-content a:hover {
-    background-color: #AAC0C7;
-  }
-  
-  /* show dropdown on hoverstate */
+  background-color: #AAC0C7;
+}
+
+/* show dropdown on hoverstate */
 .dropdown:hover .dropdown-content {
-    display: block;
-  }
+  display: block;
+}
 
 /*NAVBAR CSS CODE END*/
 
@@ -362,7 +401,7 @@ text-align: center;
   color: #e9f7fc;
   text-decoration: none;
   border-radius: 5px;
-  font-weight: 700;
+  font-weight: 550;
   transition: all 0.3s ease;
   align-self: flex-start;
 }
