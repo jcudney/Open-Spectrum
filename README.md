@@ -1,4 +1,4 @@
-TransCompass
+TransCompass v1.1.0
 Developed by jcudney
 https://github.com/jcudney/TransCompass
 
